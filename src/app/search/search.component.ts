@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,NgOnInit } from '@angular/core';
 import { SearcjhRequestService } from '../searcjh-request.service';
 import { Repositories } from '../repositories';
 import { Search } from '../search';
@@ -9,7 +9,7 @@ import { Search } from '../search';
   providers: [SearcjhRequestService],
   styleUrls: ['./search.component.css']
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent implements NgOnInit {
  public searchMe = 'fridahnamudu';
  public githubSearch: string;
 
@@ -26,7 +26,7 @@ export class SearchComponent implements OnInit {
 
   
   }
-  OnInit () {
+ NgOnInit ()  {
       this.githubUserRequest.githubUser(this.searchMe);
       this.users = this.githubUserRequest.users;
       this.userRepos.gitUserRepos(this.searchMe);
@@ -34,7 +34,7 @@ export class SearchComponent implements OnInit {
   }
 
 
-    searchRepos() {
+    searchRepos () {
         this.searchRepo = '';
         this.resultCount = 10;
 
