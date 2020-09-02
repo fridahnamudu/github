@@ -26,7 +26,7 @@ export class SearchComponent implements OnInit {
 
   
   }
-  On() {
+  OnInit () {
       this.githubUserRequest.githubUser(this.searchMe);
       this.users = this.githubUserRequest.users;
       this.userRepos.gitUserRepos(this.searchMe);
