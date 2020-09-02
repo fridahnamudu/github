@@ -10,7 +10,7 @@ import { Search } from '../search';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
- public searchMe = 'fridah';
+ public searchMe = 'fridahnamudu';
  public githubSearch: string;
 
  Search: Search;
