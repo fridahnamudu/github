@@ -21,7 +21,6 @@ export class SearchComponent implements OnInit {
  findUser(username) {
    this.githubSearch = '';
    this.searchMe = username;
-   this.ngOnInit();
  }
   constructor(public githubUserRequest: SearcjhRequestService, public userRepos: SearcjhRequestService)  { }
 
