@@ -20,7 +20,7 @@ export class SearchComponent implements OnInit {
 
  findUser(username) {
    this.githubSearch = '';
-   this.searchMe = userr;
+   this.searchMe = username;
  }
   constructor(public githubUserRequest: SearcjhRequestService, public userRepos: SearcjhRequestService)  { }
 
