@@ -68,7 +68,7 @@ export class SearcjhRequestService {
     }
 
 
-    gitRepos(search) {
+    gitRepos(searchName) {
         interface ApiResponse {
             items: any;
         }
