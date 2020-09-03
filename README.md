@@ -43,7 +43,7 @@ BDD
 - One is able to view the number of repositories, the username, the number of followers ,and the number of those he or she follows.
 ## Contact Information
 Reach me on @fridah.namudu@gmail.com
-Feel free to visit the link ()
+Feel free to visit the link (https://compassionate-meitner-3b8abe.netlify.app)
 ### License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 Copyright (c) 2020 @fridahnamudu
