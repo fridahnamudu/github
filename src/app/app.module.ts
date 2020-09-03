@@ -1,28 +1,50 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { SearchRequestService} from './search-request.service';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
+
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { SearchFormComponent } from './search-form/search-form.component';
-import { SearchComponent } from './search/search.component';
+import { UserInfoComponent } from './user-info/user-info.component';
+import { RouterModule } from '@angular/router';
+import { RoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 import { UpperCasePipe } from './upper-case.pipe';
+import { BarComponent } from './bar/bar.component';
+
+
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     RepositoriesComponent,
     SearchFormComponent,
-    SearchComponent,
+    UserInfoComponent,
     UpperCasePipe,
+    BarComponent,
+    
+
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RoutingModule,
+    RouterModule,
+    FormsModule,
+    HttpClientModule,
+  
+
   ],
-  providers: [],
+  providers: [SearchRequestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+
+

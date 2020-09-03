@@ -1,12 +1,17 @@
-import { Component, OnInit , Output, EventEmitter} from '@angular/core';
-import { Search } from '../search';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
+import {Search} from '../search';
+import {SearchRequestService} from '../search-request.service';
+import {Repositories} from '../repositories';
+import {User} from '../user';
+
 @Component({
   selector: 'app-search-form',
   templateUrl: './search-form.component.html',
+  
   styleUrls: ['./search-form.component.css']
 })
 export class SearchFormComponent implements OnInit {
-  searchInfo = new Search('');
+    searchInfo = new Search('');
     @Output() getName = new EventEmitter<Search>();
 
     searchFor(data){
@@ -14,9 +19,43 @@ export class SearchFormComponent implements OnInit {
         console.log(data.value.find)
         data.reset();
     }
-  constructor() { }
+
+    public searchMe = '';
+    public githubUser: string;
+  
+    users: User ;
+    repository: Repositories;
+    public searchRepo: string;
+
+  
+  
+    findUser(username) {
+        this.githubUser = '';
+        this.searchMe  = username;
+        this.ngOnInit();
+    }
+  
+  
+  constructor(public githubUserRequest: SearchRequestService, public userRepos: SearchRequestService) { }
+  
+  
+
 
   ngOnInit(): void {
+    this.githubUserRequest.githubUser(this.searchMe);
+    this.users = this.githubUserRequest.users;
+    this.userRepos.gitUserRepos(this.searchMe);
+    console.log(this.userRepos);
   }
+  searchRepos() {
+    this.searchRepo = '';
+  
 
+ }
 }
+
+
+
+
+
+
